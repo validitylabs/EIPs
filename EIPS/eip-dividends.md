@@ -5,7 +5,7 @@ author: Roland Kofler (@rolandkofler), Dr. Sebastian Bürgel @SCBuergel
 discussions-to: https://github.com/ethereum/EIPs/issues/1526
 status: Draft
 type: Standards Track
-category ERC
+category: ERC
 created: 2018-10-23
 ---
 
