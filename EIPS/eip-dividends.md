@@ -132,7 +132,17 @@ interface ReturnOnClaim {
 In the proposed interface are three functions.
 
 ### Timings of a Return on Claims Period
-![Figure: the common sequence during returns distribution dates in time. Optional dates are dashed.](/assets/eip-dividend/20181710_DividendTokenStandard_ResearchingtheProblemDomain.png)
+
+| Type      | Date            | Desciption                                         |
+| ----------|:---------------:| -------------------------------------------------- |
+| Optional  |Declaration Date |	claim disbursement is announced                    |
+| Optional	|Ex-Dividend Date |	until when owning claims entitles to returns       |
+| Optional	|Record Date	  | when the returns on claims eligibility is recorded |
+| Mandatory	|Payout Date	  | when return on claims can be reclaimed             |
+| Optional  |Clawback Date	  | when unclaimed funds can be given to a beneficiary |
+
+![Figure: the common sequence during returns distribution dates in time. Optional dates are dashed.](/assets/eip-dividend/20181710_DividendTokenStandard_ResearchingtheProblemDomain.png);
+Figure: the common sequence during returns distribution dates in time. Optional dates are dashed.
 
 ### Optional building block for  internal snapshots cutoff dates
 It is recommendable to integrate a standard to track the transfer of the
