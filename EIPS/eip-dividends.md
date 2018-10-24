@@ -1,7 +1,7 @@
 ---
 eip: <to be assigned>
 title: Dividend Standard
-author: [Roland Kofler](@rolandkofler), [Dr. Sebastian Bürgel](@SCBuergel)
+author: Roland Kofler (@rolandkofler), Dr. Sebastian Bürgel (@SCBuergel)
 discussions-to: https://github.com/ethereum/EIPs/issues/1526
 status: Draft
 type: Standards Track
