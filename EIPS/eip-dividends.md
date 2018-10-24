@@ -24,7 +24,9 @@ Represents a single standard for dividend disembursement and dividend claiming, 
 Security Tokens are emerging quickly as a new innovation in the blockchain realm. Standardization is a pressing issue (See ERC1400 et.al.). A small isolated topic is the distribution of dividends.
 
 But dividends are only one of many forms of *returns on asset claims*, the standard thus tries to be as generic as possible, being applicable e.g. for interests on bonds.
+
 **Nota Bene:** Because of this generalization, in this document (1) the more generic term *returns on claims* is interchangeable with (2) the more popular term *dividends*.
+
 A dividend standard (more general: a "return on claim standard"):
 1. Is useful to *crypto investment funds, (de-)centralized exchanges, wallets, security token users, tax authorities* and *token creators*.
 2. Is limited in *a well defined scope*, that can be expressed without touching other needed realms like regulations and taxation or bearing incompatibilities with existing standards like ERC20.
