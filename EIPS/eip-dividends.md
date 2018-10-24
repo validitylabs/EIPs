@@ -132,9 +132,7 @@ interface ReturnOnClaim {
 In the proposed interface are three functions.
 
 ### Timings of a Return on Claims Period
-![](../../assets/eip-dividend/20181710_DividendTokenStandard_ResearchingtheProblemDomain.png)
-
-Figure: the common sequence during returns distribution dates in time. Optional dates are dashed.
+![Figure: the common sequence during returns distribution dates in time. Optional dates are dashed.](/assets/eip-dividend/20181710_DividendTokenStandard_ResearchingtheProblemDomain.png)
 
 ### Optional building block for  internal snapshots cutoff dates
 It is recommendable to integrate a standard to track the transfer of the
