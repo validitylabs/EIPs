@@ -141,7 +141,7 @@ In the proposed interface are three functions.
 | Mandatory	|Payout Date	  | when return on claims can be reclaimed             |
 | Optional  |Clawback Date	  | when unclaimed funds can be given to a beneficiary |
 
-![Figure: the common sequence during returns distribution dates in time. Optional dates are dashed.](/assets/eip-dividend/20181710_DividendTokenStandard_ResearchingtheProblemDomain.png);
+![Figure: the common sequence during returns distribution dates in time. Optional dates are dashed.](/assets/eip-dividend/20181710_DividendTokenStandard_ResearchingtheProblemDomain.png)
 Figure: the common sequence during returns distribution dates in time. Optional dates are dashed.
 
 ### Optional building block for  internal snapshots cutoff dates
