@@ -46,7 +46,7 @@ pragma solidity ^0.4.25;
 interface ReturnOnClaim {
 
     /**
-     * Disburses returns to the smart contract and initializes the a Returns
+     * Disburses returns to the smart contract and initializes the Returns
      * Distribution Period.
      * @dev marks implicitly the Declaration Date i.e. when claim disbursement
      *      is announced. OPTIONAL parameters can be `require`d to be `0`
@@ -150,7 +150,7 @@ Figure: the common sequence during returns distribution dates in time. Optional 
 It is recommendable to integrate a standard to track the transfer of the
 *claims* behind the dividend rights.
 For example Validity Labs has proposed recently a [ERC20Snapshot.sol](https://github.com/OpenZeppelin/openzeppelin-solidity/blob/617d5278865da56455fd64d149ff1f6ff6071f1d/contracts/token/ERC20/ERC20Snapshot.sol#L44)
- for the Open Zeppelin ecosystem
+ for the Open Zeppelin ecosystem.
 
 ## Rationale
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
