@@ -53,11 +53,11 @@ interface ReturnOnClaim {
      * @param _exDividendDate OPTIONAL when owning claims entitled to returns
      * @param _recordDate OPTIONAL when the returns on claims eligibility
      *        is recorded, normally the same date as _exDividendDate
-     * @param _payoutDate MANDATORY when return on claims can be reclaimed
+     * @param _payoutDate MANDATORY when return on claims can be claimed
      * @param _clawBackDate OPTIONAL when unclaimed funds can be given to a
      *        beneficiary
      * @param _tokens array of tokens for disbursement, additionally Ether can
-     *        be send
+     *        be sent
      * @param _allocation the number of tokens disbursed, the last entry can be
      *        the amount of Ether
      * @return _returnCode, normally `0` if everything went well.
@@ -76,7 +76,7 @@ interface ReturnOnClaim {
 
     /**
      * Claims returns on assets
-     * @param _beneficiary the destination for the returns, can be `msg.sender`
+     * @param _beneficiary the destination & asset owner for the returns, can be `msg.sender`
      * @return _returnCode, normally `0` if everything went well.
      **/
     function claimReturnsFor(address _beneficiary)
@@ -85,7 +85,7 @@ interface ReturnOnClaim {
 
     /**
      * Looks if reclaiming returns is currently possible
-     * @param _claimer the destination for the returns, can be `msg.sender`
+     * @param _claimer the asset owner for the returns, can be `msg.sender`
      * @param _beneficiary the destination for the returns, can be `msg.sender`
      * @return _returnCode, normally `0` if everything went well.
      **/
@@ -121,7 +121,7 @@ interface ReturnOnClaim {
 
     /**
      * Event for successfully claiming returns.
-     * @param _claimer the destination for the returns, can be `msg.sender`
+     * @param _claimer the asset owner for the returns, can be `msg.sender`
      * @param _beneficiary the destination for the returns, can be `msg.sender`
      **/
     event ReturnsClaimed(
@@ -138,7 +138,7 @@ In the proposed interface are three functions.
 | Type      | Date            | Desciption                                         |
 | ----------|:---------------:| -------------------------------------------------- |
 | Optional  |Declaration Date |	claim disbursement is announced                    |
-| Optional	|Ex-Dividend Date |	until when owning claims entitles to returns       |
+| Optional	|Ex-Dividend Date |	until when owning claims entitled to returns       |
 | Optional	|Record Date	  | when the returns on claims eligibility is recorded |
 | Mandatory	|Payout Date	  | when return on claims can be reclaimed             |
 | Optional  |Clawback Date	  | when unclaimed funds can be given to a beneficiary |
