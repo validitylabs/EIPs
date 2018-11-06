@@ -124,6 +124,20 @@ interface Earning {
         uint256[] _tokenAllocation,
         uint256 _etherAllocation
     );
+    
+    /**
+     * Event for when a asset manager anounces a date in the earnings disbursment cycle other than payout
+     * @param _date when the payout will happen
+     * @param _stage what is exactly announced: 
+     *               0 = Declaration Date, 
+     *               1 = Record Date, 
+     *               2 = Ex-Dividend Date
+     *               3 = Clawback Date
+     **/
+    event EarningsEventAnounced(
+        uint256 _date,
+        uint256 _stage 
+    );
 
 }
 ```
