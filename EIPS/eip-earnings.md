@@ -111,7 +111,6 @@ interface Earning {
 
 }
 ```
-In the proposed interface are three functions.
 
 ### Optional Return on Claims Periods
 TO BE Discussed: makes it sense to insert also a generic disbursment for the company?
