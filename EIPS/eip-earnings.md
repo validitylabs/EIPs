@@ -13,11 +13,11 @@ created: 2018-10-23
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the EIP.-->
-Tokens that generate returns for the holder should implement a standard way for processing payouts.
+Tokens that generate returns for the token holder should have a standard way for processing payouts. Many actors can profit from the resulting interopability.
 
 ## Abstract
 <!--A short (~200 word) description of the technical issue being addressed.-->
-Represents a single standard for *earnings* disembursement and claiming. It aims to be compatible with (and even agnostic/ orthogonal to) fungible and non-fungible token standards like ERC20 and ERC777.
+This ERC represents a single standard for *earnings* disembursement and claiming. It aims to be compatible with (and even agnostic/ orthogonal to) fungible and non-fungible token standards like ERC20 and ERC777.
 The term *earnings* and *returns* is used interchangably for anything that represents a surplus on an asset or service.
 
 ## Motivation
@@ -25,7 +25,7 @@ The term *earnings* and *returns* is used interchangably for anything that repre
 Security Tokens are emerging quickly as a new innovation in the blockchain realm. Standardization is a pressing issue (See ERC1400 et.al.). A small isolated topic is the distribution of *earnings* like *stock dividends*, *bond interests*, *staking revenue* etc.
 
 A earnings standard...
-1. ...is useful to *crypto investment funds, (de-)centralized exchanges, wallets, security token users, tax authorities*, *token creators* and *staking pools*
+1. ...is useful to *crypto investment funds, (de-)centralized exchanges, wallets, security token users, tax authorities*, *token creators* and *staking pools*.
 2. ...is limited to *a well defined scope*, that can be expressed without touching other needed realms like regulations and taxation or bearing incompatibilities with existing standards like ERC20.
 3. ...is *generic enough* to comprehend all variants of revenue generating financial instruments possible (not only stock dividends, but REIT returns, bond interests, staking revenues, intellectual property royalties and many more)
 Therefore we believe that there is an opportunity for an Ethereum Request for Comment (ERC) targeting earning disbursement, that can become a de facto standard in the spirit of the famous ERC20.
