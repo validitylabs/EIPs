@@ -25,9 +25,22 @@ The term *earnings* and *returns* is used interchangably for anything that repre
 Security Tokens are emerging quickly as a new innovation in the blockchain realm. Standardization is a pressing issue (See ERC1400 et.al.). A small isolated topic is the distribution of *earnings* like *stock dividends*, *bond interests*, *staking revenue* etc.
 
 A earnings standard...
-1. ...is useful to *crypto investment funds, (de-)centralized exchanges, wallets, security token users, tax authorities*, *token creators* and *staking pools*.
+1. ...is useful to 
+    * crypto investment funds 
+    * (de-)centralized exchanges
+    * wallets 
+    * staking pools
+    * ...
 2. ...is limited to *a well defined scope*, that can be expressed without touching other needed realms like regulations and taxation or bearing incompatibilities with existing standards like ERC20.
-3. ...is *generic enough* to comprehend all variants of revenue generating financial instruments possible (not only stock dividends, but REIT returns, bond interests, staking revenues, intellectual property royalties and many more)
+3. ...is *generic enough* to comprehend all variants of revenue generating financial instruments possible:
+    * stock dividends
+    * real estate funds (REIT) returns
+    * bond interests
+    * loan interests
+    * staking revenues
+    * intellectual property royalties 
+    * ... and many more
+    
 Therefore we believe that there is an opportunity for an Ethereum Request for Comment (ERC) targeting earning disbursement, that can become a de facto standard in the spirit of the famous ERC20.
 
 ## Specification
