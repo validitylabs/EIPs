@@ -108,6 +108,20 @@ interface Earning {
         address indexed _claimer,
         address indexed _beneficiary
     );
+    
+    /**
+     * Event for when a asset manager anounces a payout date
+     * @param _tokens the asset manager wants to payout
+     * @param _tokenAllocation the total amounts of the tokens an asset manager wants to payout, 
+     *        can be empty if it is not established yet
+     * @param _etherAllocation he total amounts of the tokens an asset manager wants to payout, 
+     *        can be empty if it is not established yet
+     **/
+    event PayoutAnounced(
+        address[] _tokens, 
+        uint256[] _tokenAllocation,
+        uint256 _etherAllocation
+    );
 
 }
 ```
