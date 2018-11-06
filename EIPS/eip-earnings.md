@@ -65,27 +65,39 @@ interface Earning {
     function canClaim(address _claimer)
     public
     returns (uint256 _returnCode);
+    
+    /**
+     * Looks up if there are current earnings to be disbursed to the claimer
+     * Gives back the allocated amounts even if `canClaim` signals objection to a payout
+     * @param _claimer the asset owner for the returns, can be `msg.sender`
+     * @return _tokens array of tokens for disbursement (independend if ERC20, ERC721 etc.)
+     * @return _allocation the number of tokens disbursed
+     **/
+    function getEarningsOwed(address _claimer)
+    public
+    returns (address[] _tokens, uint256[] _allocation);
+    
+     /**
+     * Looks up if there are current earnings of Eth to be disbursed to the claimer
+     * Extra function for Ether because it has no address.
+     * Gives back the allocated amounts even if `canClaim` signals objection to a payout
+     * @param _claimer the asset owner for the returns, can be `msg.sender`
+     * @return _tokens array of tokens for disbursement
+     * @return _allocation the number of tokens disbursed
+     **/
+    function getEtherEarningsOwed(address _claimer)
+    public
+    returns (uint256 _allocation);
 
     /**
-     * Claims earnings on assets. The owner must have the right to claim or the (see canClaim).
+     * Claims earnings on assets. The owner must have the right to claim or the (see `canClaim()`).
+     * Same for Ether and Tokens (independend if ERC20, ERC721 etc.)
      * @param _beneficiary the destination where the asset owner wants to transfer returns, can be `msg.sender`
      * @return _returnCode, normally `0` if everything went well.
      **/
     function claimEarningsFor(address _beneficiary)
     public
     returns (uint256 _returnCode);
-
-    /**
-     * Claims earnings on assets
-     * @param _claimer the asset owner for the returns, can be `msg.sender`
-     * @return _tokens array of tokens for disbursement, additionally Ether can
-     *        be sent
-     * @return _allocation the number of tokens disbursed, the last entry can be
-     *        the amount of Ether
-     **/
-    function getEarningsOwed(address _claimer)
-    public
-    returns (address[] _tokens, uint256[] _allocation);
 
     /**
      * Event for successfully claiming returns.
