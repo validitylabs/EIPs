@@ -42,22 +42,23 @@ pragma solidity ^0.4.25;
 
 interface EarningsOnClaim {
 
-    /**
-     * Claims earnings on assets
-     * @param _beneficiary the destination where the asset owner wants to transfer returns, can be `msg.sender`
-     * @return _returnCode, normally `0` if everything went well.
-     **/
-    function claimReturnsFor(address _beneficiary)
-    public
-    returns (uint256 _returnCode);
-
-    /**
-     * Looks if claiming earnings is currently possible
+     /**
+     * Looks if claiming earnings is currently possible for a claimer and a beneficiary. 
+     * For example the claimer might not have performed KYC and is not entitled to claim the returns 
      * @param _claimer the asset owner for the returns, can be `msg.sender`
      * @param _beneficiary the destination for the returns, can be `msg.sender` or same as _claimer
      * @return _returnCode, normally `0` if everything went well.
      **/
     function canClaim(address _claimer, address _beneficiary)
+    public
+    returns (uint256 _returnCode);
+
+    /**
+     * Claims earnings on assets
+     * @param _beneficiary the destination where the asset owner wants to transfer returns, can be `msg.sender`
+     * @return _returnCode, normally `0` if everything went well.
+     **/
+    function claimEarningsFor(address _beneficiary)
     public
     returns (uint256 _returnCode);
 
@@ -69,7 +70,7 @@ interface EarningsOnClaim {
      * @return _allocation the number of tokens disbursed, the last entry can be
      *        the amount of Ether
      **/
-    function getReturnsOwed(address _claimer)
+    function getEarningsOwed(address _claimer)
     public
     returns (address[] _tokens, uint256[] _allocation);
 
