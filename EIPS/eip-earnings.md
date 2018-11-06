@@ -46,10 +46,9 @@ interface EarningsOnClaim {
      * Looks if claiming earnings is currently possible for a claimer and a beneficiary. 
      * For example the claimer might not have performed KYC and is not entitled to claim the returns 
      * @param _claimer the asset owner for the returns, can be `msg.sender`
-     * @param _beneficiary the destination for the returns, can be `msg.sender` or same as _claimer
      * @return _returnCode, normally `0` if everything went well.
      **/
-    function canClaim(address _claimer, address _beneficiary)
+    function canClaim(address _claimer)
     public
     returns (uint256 _returnCode);
 
