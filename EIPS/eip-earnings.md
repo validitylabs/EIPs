@@ -73,7 +73,7 @@ interface Earning {
      * @return _tokens array of tokens for disbursement (independend if ERC20, ERC721 etc.)
      * @return _allocation the number of tokens disbursed
      **/
-    function getEarningsOwed(address _claimer)
+    function getTokenEarningsOwed(address _claimer)
     public
     returns (address[] _tokens, uint256[] _allocation);
     
