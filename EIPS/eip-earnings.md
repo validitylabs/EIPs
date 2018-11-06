@@ -34,11 +34,11 @@ A earnings standard...
 2. ...is limited to *a well defined scope*, that can be expressed without touching other needed realms like regulations and taxation or bearing incompatibilities with existing standards like ERC20.
 3. ...is *generic enough* to comprehend all variants of revenue generating financial instruments possible:
     * stock dividends
-    * real estate funds (REIT) returns
+    * real estate investment trusts (REIT) returns
     * bond interests
-    * loan interests
     * staking revenues
     * intellectual property royalties 
+    * asset rental income
     * ... and many more
     
 Therefore we believe that there is an opportunity for an Ethereum Request for Comment (ERC) targeting earning disbursement, that can become a de facto standard in the spirit of the famous ERC20.
@@ -47,17 +47,18 @@ Therefore we believe that there is an opportunity for an Ethereum Request for Co
 <!--The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current Ethereum platforms (go-ethereum, parity, cpp-ethereum, ethereumj, ethereumjs, and [others](https://github.com/ethereum/wiki/wiki/Clients)).-->
 
 
-### ReturnOnClaim interface
+### Earning interface
 
-The generic interface regulates the disbursment and the reclaiming of *returns on claims*.
+The generic interface regulates the disbursment and the reclaiming of *returns on assets*.
 ```
 pragma solidity ^0.4.25;
 
-interface EarningsOnClaim {
+interface Earning {
 
      /**
-     * Looks if claiming earnings is currently possible for a claimer and a beneficiary. 
-     * For example the claimer might not have performed KYC and is not entitled to claim the returns 
+     * Looks if claiming earnings is currently possible for a claimer. 
+     * For example the claimer might not have performed KYC and is not entitled to claim the returns,
+     * or he does not own the asset he is claiming
      * @param _claimer the asset owner for the returns, can be `msg.sender`
      * @return _returnCode, normally `0` if everything went well.
      **/
@@ -66,7 +67,7 @@ interface EarningsOnClaim {
     returns (uint256 _returnCode);
 
     /**
-     * Claims earnings on assets
+     * Claims earnings on assets. The owner must have the right to claim or the (see canClaim).
      * @param _beneficiary the destination where the asset owner wants to transfer returns, can be `msg.sender`
      * @return _returnCode, normally `0` if everything went well.
      **/
